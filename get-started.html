@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Slack Login</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      background-color: white;
+    }
+
+    .logo {
+      margin-bottom: 20px;
+    }
+
+    .logo img {
+      height: 40px;
+    }
+
+    h1 {
+      font-size: 2rem;
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
+
+    .subtitle {
+      font-size: 14px;
+      color: #555;
+      margin-bottom: 25px;
+    }
+
+    .form-container {
+      width: 100%;
+      max-width: 360px;
+      display: flex;
+      flex-direction: column;
+      align-items: stretch;
+    }
+
+    input[type="email"] {
+      padding: 12px;
+      border: 2px solid #ccc;
+      border-radius: 6px;
+      font-size: 16px;
+      outline: none;
+      margin-bottom: 15px;
+    }
+
+    .btn-purple {
+      background-color: #541554;
+      color: white;
+      font-weight: 600;
+      padding: 12px;
+      border: none;
+      border-radius: 6px;
+      font-size: 16px;
+      cursor: pointer;
+      margin-bottom: 20px;
+    }
+
+    .or-divider {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 20px 0;
+    }
+
+    .or-divider::before,
+    .or-divider::after {
+      content: "";
+      flex: 1;
+      height: 1px;
+      background: #ccc;
+      margin: 0 10px;
+    }
+
+    .btn-outline {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 12px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 14px;
+      background-color: white;
+      cursor: pointer;
+      margin-bottom: 10px;
+    }
+
+    .btn-outline img {
+      height: 18px;
+    }
+
+    .signin-link {
+      font-size: 14px;
+      margin-top: 20px;
+      text-align: center;
+    }
+
+    .signin-link a {
+      color: #1264a3;
+      text-decoration: none;
+    }
+
+    .footer {
+      position: fixed;
+      bottom: 10px;
+      font-size: 12px;
+      color: #888;
+      text-align: center;
+      width: 100%;
+    }
+
+    .footer a {
+      margin: 0 10px;
+      color: #888;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="logo">
+    <img src="https://a.slack-edge.com/80588/marketing/img/icons/icon_slack_hash_colored.png" alt="Slack Logo">
+  </div>
+
+  <h1>First, enter your email</h1>
+  <p class="subtitle">We suggest using the <strong>email address you use at work</strong>.</p>
+
+  <div class="form-container">
+    <input type="email" placeholder="name@work-email.com" required>
+    <button class="btn-purple">Continue</button>
+
+    <div class="or-divider">OR</div>
+
+    <button class="btn-outline">
+      <img src="https://www.svgrepo.com/show/475656/google-color.svg" alt="Google">
+      Continue With Google
+    </button>
+
+    <button class="btn-outline">
+      <img src="logo-apple.png" alt="Apple">
+      Continue With Apple
+    </button>
+
+    <div class="signin-link">
+      Already using Slack? <a href="#">Sign in to an existing workspace</a>
+    </div>
+  </div>
+
+  <div class="footer">
+    <a href="#">Privacy & Terms</a> |
+    <a href="#">Contact Us</a> |
+    <a href="#">🌐 Change region</a>
+  </div>
+
+</body>
+</html>

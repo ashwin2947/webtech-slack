@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Slack Pricing</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: white;
+      color: #1d1c1d;
+      padding: 20px;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 30px;
+      border-bottom: 1px solid #ddd;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 25px;
+      font-size: 14px;
+    }
+
+    .nav-actions {
+      display: flex;
+      gap: 15px;
+    }
+
+    .btn {
+      padding: 8px 16px;
+      border-radius: 4px;
+      font-weight: bold;
+      cursor: pointer;
+      font-size: 14px;
+    }
+
+    .btn-outline {
+      border: 1px solid #541554;
+      color: #541554;
+      background: white;
+    }
+
+    .btn-purple {
+      background-color: #541554;
+      color: white;
+      border: none;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 32px;
+      margin: 40px 0 30px;
+    }
+
+    .pricing-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .card {
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .card h2 {
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+
+    .price {
+      font-size: 18px;
+      margin: 10px 0;
+    }
+
+    .btn-card {
+      margin: 15px 0;
+      background-color: #541554;
+      color: white;
+      border: none;
+      padding: 10px;
+      font-weight: bold;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    ul {
+      list-style: none;
+      margin-top: 10px;
+    }
+
+    li {
+      margin: 6px 0;
+      font-size: 14px;
+    }
+
+    li::before {
+      content: "✔";
+      color: #007a5a;
+      margin-right: 8px;
+    }
+
+    .muted {
+      color: #999;
+    }
+
+    @media (max-width: 900px) {
+      .pricing-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .pricing-grid {
+        grid-template-columns: 1fr;
+      }
+
+      nav {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .nav-links, .nav-actions {
+        margin-top: 10px;
+        flex-direction: column;
+        gap: 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="logo">
+      <img src="https://a.slack-edge.com/80588/marketing/img/icons/icon_slack_hash_colored.png" alt="Slack" height="30">
+      <strong>slack</strong>
+    </div>
+    <div class="nav-links">
+      <span>Features</span>
+      <span>Solutions</span>
+      <span>Enterprise</span>
+      <span>Resources</span>
+      <span>Pricing</span>
+    </div>
+    <div class="nav-actions">
+      <span>Sign In</span>
+      <button class="btn btn-outline">Talk to Sales</button>
+      <button class="btn btn-purple">Get Started</button>
+    </div>
+  </nav>
+
+  <h1>Make teamwork more productive</h1>
+
+  <div class="pricing-grid">
+
+    <!-- Free Plan -->
+    <div class="card">
+      <h2>Free</h2>
+      <div class="price">₹0/mo<br><small>Free forever</small></div>
+      <button class="btn-card">Get Started</button>
+      <ul>
+        <li>90 days of message history</li>
+        <li>Ten app integrations</li>
+        <li>1:1 audio and video meetings</li>
+        <li>1:1 messages with people outside your organisation</li>
+        <li>One workspace</li>
+        <li class="muted">Unlimited workflows</li>
+        <li class="muted">Collaborate on lists and docs</li>
+        <li class="muted">SAML-based sign-on</li>
+      </ul>
+    </div>
+
+    <!-- Pro Plan -->
+    <div class="card">
+      <h2>Pro</h2>
+      <div class="price"><del>545</del> ₹245.25/mo<br><small>per user/month, billed yearly</small></div>
+      <button class="btn-card">Get Started</button>
+      <ul>
+        <li>Slack AI add-on available</li>
+        <li>Unlimited message history</li>
+        <li>Unlimited app integrations</li>
+        <li>Group audio and video meetings</li>
+        <li>Group messages with external users</li>
+        <li>One workspace</li>
+        <li>Unlimited workflows</li>
+        <li>Collaborate on lists and docs</li>
+        <li>User provisioning</li>
+      </ul>
+    </div>
+
+    <!-- Business+ Plan -->
+    <div class="card">
+      <h2>Business+</h2>
+      <div class="price"><del>₹938</del> ₹422.10/mo<br><small>per user/month, billed yearly</small></div>
+      <button class="btn-card">Get Started</button>
+      <ul>
+        <li>Slack AI add-on available</li>
+        <li>Unlimited message history</li>
+        <li>Unlimited app integrations</li>
+        <li>Group audio and video meetings</li>
+        <li>Group messages with external users</li>
+        <li>One workspace</li>
+        <li>Unlimited workflows</li>
+        <li>Collaborate on lists and docs</li>
+        <li>SAML-based sign-on</li>
+        <li>Data exports for all messages</li>
+      </ul>
+    </div>
+
+    <!-- Enterprise Plan -->
+    <div class="card">
+      <h2>Enterprise Grid</h2>
+      <div class="price">Contact sales for pricing</div>
+      <button class="btn-card">Contact Sales</button>
+      <ul>
+        <li>Slack AI add-on available</li>
+        <li>Unlimited message history</li>
+        <li>Unlimited app integrations</li>
+        <li>Group audio and video meetings</li>
+        <li>Group messages with external users</li>
+        <li>Unlimited workspaces</li>
+        <li>Unlimited workflows</li>
+        <li>Custom template collaboration</li>
+        <li>Advanced security & SAML support</li>
+        <li>Data export and backup tools</li>
+      </ul>
+    </div>
+
+  </div>
+
+</body>
+</html>

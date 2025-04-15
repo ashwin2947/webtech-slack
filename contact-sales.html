@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Slack Sales Contact Form</title>
+<style>
+* {
+box-sizing: border-box;
+}
+
+body {
+margin: 0;
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+background-color: #4A154B;
+color: white;
+}
+
+/* NAVIGATION */
+.navbar {
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding: 15px 40px;
+}
+
+.navbar-left, .navbar-right {
+display: flex;
+align-items: center;
+gap: 20px;
+}
+
+.navbar-left img {
+height: 25px;
+}
+
+.navbar a {
+text-decoration: none;
+color: white;
+font-size: 15px;
+}
+
+.btn {
+padding: 10px 16px;
+border: none;
+border-radius: 6px;
+font-size: 14px;
+cursor: pointer;
+}
+
+.btn-outline {
+background: transparent;
+border: 1px solid white;
+color: white;
+}
+
+.btn-primary {
+background-color: white;
+color: #4A154B;
+}
+
+/* MAIN CONTENT */
+.main-content {
+display: flex;
+flex-wrap: wrap;
+padding: 40px;
+gap: 40px;
+background-color: #4A154B;
+}
+
+.left-content {
+flex: 1;
+min-width: 300px;
+}
+
+.left-content h1 {
+font-size: 2.8em;
+}
+
+.left-content ul {
+padding: 0;
+list-style: none;
+}
+
+.left-content li::before {
+content: '✓';
+margin-right: 10px;
+}
+
+.left-content a {
+color: #00B8D9;
+text-decoration: none;
+}
+
+.form-wrapper {
+flex: 1;
+min-width: 300px;
+background: white;
+color: black;
+border-radius: 10px;
+padding: 30px;
+}
+
+.form-row {
+display: flex;
+gap: 20px;
+margin-bottom: 20px;
+}
+
+.form-row > div {
+flex: 1;
+}
+
+.form-group label {
+font-weight: bold;
+display: block;
+margin-bottom: 5px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+width: 100%;
+padding: 10px;
+border: 1px solid #ccc;
+border-radius: 6px;
+}
+
+.form-group textarea {
+resize: vertical;
+}
+
+.submit-btn {
+margin-top: 10px;
+padding: 12px 20px;
+background-color: #4A154B;
+color: white;
+border: none;
+border-radius: 6px;
+font-size: 16px;
+cursor: pointer;
+}
+
+/* COMPANIES */
+.company-section {
+background: white;
+text-align: center;
+color: black;
+padding: 40px 20px;
+}
+
+.company-section img {
+height: 40px;
+margin: 0 20px;
+vertical-align: middle;
+}
+
+footer {
+background: #f8f8f8;
+padding: 40px 20px;
+margin-top: 60px;
+font-size: 14px;
+color: #666;
+}
+
+.footer-container {
+max-width: 1200px;
+margin: 0 auto;
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+gap: 40px;
+}
+
+.footer-section h4 {
+margin-bottom: 12px;
+font-weight: 700;
+color: #333;
+}
+
+.footer-section a {
+display: block;
+text-decoration: none;
+color: #666;
+margin-bottom: 8px;
+transition: color 0.3s;
+}
+
+.footer-section a:hover {
+color: purple;
+}
+
+@media (max-width: 768px) {
+.form-row {
+flex-direction: column;
+}
+}
+</style>
+</head>
+<body>
+
+<!-- NAVIGATION BAR -->
+<div class="navbar">
+<div class="navbar-left">
+<img src="https://a.slack-edge.com/80588/marketing/img/icons/icon_slack_hash_colored.png" alt="Slack Logo">
+<a href="#">Features</a>
+<a href="#">Solutions</a>
+<a href="#">Enterprise</a>
+<a href="#">Resources</a>
+<a href="#">Pricing</a>
+</div>
+<div class="navbar-right">
+<a href="#">Sign in</a>
+<button class="btn btn-outline">TALK TO SALES</button>
+<button class="btn btn-primary">GET STARTED</button>
+</div>
+</div>
+
+<!-- MAIN CONTENT -->
+<div class="main-content">
+<div class="left-content">
+<h1>Contact our sales team</h1>
+<ul>
+<li>Schedule a demo</li>
+<li>Get pricing information</li>
+<li>Explore use cases for your team</li>
+</ul>
+<p>For technical issues and product questions, please visit our <a href="#">Help Centre</a>.</p>
+</div>
+
+<div class="form-wrapper">
+<form>
+<div class="form-row">
+<div class="form-group">
+<label>First name *</label>
+<input type="text" required>
+</div>
+<div class="form-group">
+<label>Surname *</label>
+<input type="text" required>
+</div>
+</div>
+
+<div class="form-row">
+<div class="form-group">
+<label>Work email address *</label>
+<input type="email" required>
+</div>
+<div class="form-group">
+<label>Role *</label>
+<select required>
+<option>Please select one</option>
+</select>
+</div>
+</div>
+
+<div class="form-row">
+<div class="form-group">
+<label>Country/Region *</label>
+<select required>
+<option>India</option>
+</select>
+</div>
+</div>
+
+<div class="form-row">
+<div class="form-group">
+<label>Company *</label>
+<input type="text" required>
+</div>
+<div class="form-group">
+<label>Company size *</label>
+<select required>
+<option>Please select one</option>
+</select>
+</div>
+</div>
+
+<div class="form-row">
+<div class="form-group">
+<label>Phone number *</label>
+<input type="tel" required>
+</div>
+<div class="form-group">
+<label>How can our sales team help you? *</label>
+<select required>
+<option>Please select one</option>
+</select>
+</div>
+</div>
+
+<div class="form-group">
+<label>Anything else? (optional)</label>
+<textarea rows="4" placeholder="What challenges are you looking to overcome with Slack?"></textarea>
+</div>
+
+<button type="submit" class="submit-btn">Submit</button>
+</form>
+</div>
+</div>
+
+<!-- COMPANIES SECTION -->
+<div class="company-section">
+<h2>Incredible companies use Slack</h2>
+<div class="logos">
+<img src="logo-swiggy.png" alt="Swiggy">
+<img src="logo-razorpay.png" alt="Razorpay">
+<img src="logo-zomato.png" alt="Zomato">
+</div>
+</div>
+<footer>
+<div class="footer-container">
+<div class="footer-section">
+<h4>PRODUCT</h4>
+<a href="#">Watch demo</a>
+<a href="#">Pricing</a>
+<a href="#">Paid vs Free</a>
+<a href="#">Accessibility</a>
+<a href="#">Featured releases</a>
+<a href="#">Change log</a>
+<a href="#">Status</a>
+</div>
+<div class="footer-section">
+<h4>FEATURES</h4>
+<a href="#">Channels</a>
+<a href="#">Slack Connect</a>
+<a href="#">Workflow Builder</a>
+<a href="#">Slack AI</a>
+<a href="#">Apps & integrations</a>
+<a href="#">Clips</a>
+<a href="#">Lists</a>
+</div>
+<div class="footer-section">
+<h4>SOLUTIONS</h4>
+<a href="#">Engineering</a>
+<a href="#">IT</a>
+<a href="#">Sales</a>
+<a href="#">Project management</a>
+<a href="#">Marketing</a>
+<a href="#">Security</a>
+</div>
+<div class="footer-section">
+<h4>RESOURCES</h4>
+<a href="#">Help Centre</a>
+<a href="#">What's new</a>
+<a href="#">Customer stories</a>
+<a href="#">Slack blog</a>
+<a href="#">Developers</a>
+<a href="#">Slack Certified</a>
+</div>
+<div class="footer-section">
+<h4>COMPANY</h4>
+<a href="#">About us</a>
+<a href="#">News</a>
+<a href="#">Media kit</a>
+<a href="#">Careers</a>
+<a href="#">Design blog</a>
+<a href="#">Contact us</a>
+</div>
+</div>
+</footer>
+</body>
+</html>

@@ -1,8 +1,15 @@
-body {
+* {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: "Open Sans", sans-serif;
-  background-color: white;
+  text-decoration: none;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  background-color: #fff;
+  color: #333;
+  line-height: 1.6;
 }
 
 .centered-container {
@@ -11,149 +18,193 @@ body {
   padding: 0 20px;
 }
 
-p{
-  font-size: 18px;
-}
-
-header {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 20px;
-}
-
-nav {
-  border-radius: 50px;
+header nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 24px;
-  background-color: white;
+  padding: 16px 24px;
+  border-radius: 50px;
+  background: #fff;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   flex-wrap: wrap;
-}
-
-.logo-section {
-  display: flex;
-  align-items: center;
-  gap: 10px;
 }
 
 .logo-section img {
   height: 40px;
 }
 
-.nav-links {
+.nav-links, .search-sign, .auth-buttons {
   display: flex;
   gap: 20px;
-}
-
-.nav-links a {
-  text-decoration: none;
-  color: #333;
-  font-weight: 600;
-  font-size: 14px;
-}
-
-.nav-links a:hover {
-  color: purple;
-}
-
-.search-sign {
-  display: flex;
   align-items: center;
-  gap: 20px;
 }
 
-.search-sign img {
-  height: 20px;
-}
-
+.nav-links a,
 .search-sign a {
   text-decoration: none;
-  color: #333;
   font-weight: 600;
   font-size: 14px;
+  color: #333;
+  transition: color 0.3s ease;
 }
 
+.nav-links a:hover,
 .search-sign a:hover {
   color: purple;
 }
 
-.auth-buttons {
-  display: flex;
-  gap: 12px;
-}
-
 .auth-buttons a {
   padding: 10px 14px;
-  text-decoration: none;
-  font-size: 14px;
-  font-weight: 600;
   border-radius: 4px;
   border: 1px solid purple;
-  transition: background-color 0.3s ease;
 }
 
-.talk-btn {
+.talk-btn{
+  background: white;
   color: purple;
-  background-color: white;
 }
 
 .talk-btn:hover {
-  background-color: #f3e8ff;
+  background: #f3e8ff;
 }
 
 .start-btn {
-  background-color: purple;
-  color: white;
+  background: purple;
+  color: #fff;
 }
 
 .start-btn:hover {
-  background-color: #6a0dad;
+  background: #6a0dad;
 }
 
-.moto-video-loop {
-  max-width: 1200px;
-  margin: 40px auto;
-  padding: 0 20px;
-}
-
-.moto-video-loop video {
+.moto-video-loop video,
+.usage-video video {
   width: 100%;
-  height: 15%;
-  display: block;
   border-radius: 16px;
+  display: block;
 }
 
-.mid-buttons{
-  align-items: center;
+.mid-buttons {
   display: flex;
-  gap: 12px;
   justify-content: center;
+  gap: 12px;
+  margin: 20px 0;
 }
 
-.mid-buttons a{
+.mid-buttons a {
   padding: 18px 26px;
-  text-decoration: none;
+  border: 2px solid purple;
+  border-radius: 4px;
   font-size: 16px;
   font-weight: 500;
-  border-radius: 4px;
-  border: 2px solid purple;
-  transition: background-color 0.3s ease; 
-}
-.companies table{
-  height: auto;
-  width: 100%;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
 }
 
-
-.companies img{
+.companies {
+  display: flex;
   justify-content: center;
-  height: auto;
-  width: 40%;
-  padding: 30px 20px;
+  gap: 30px;
+  flex-wrap: wrap;
+  margin: 40px 0;
 }
 
-#padding-div{
-  padding-bottom: 1000px;
+.companies img {
+  width: 100px;
+  object-fit: contain;
+}
+
+.usage-video {
+  max-width: 900px;
+  margin: 40px auto;
+}
+
+h1 {
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin: 40px 0 20px;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  font-weight: 500;
+}
+
+.tag {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: #2c2c2c;
+}
+
+.tag span {
+  font-weight: bold;
+}
+
+.tags-explanation {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 40px;
+  padding: 60px 20px;
+}
+
+.tags-1 h2 {
+  font-size: 1.75rem;
+  margin: 10px 0;
+}
+
+.tags-1 p {
+  font-size: 1.125rem;
+  margin-bottom: 1rem;
+}
+
+.text-number {
+  font-size: 3.125rem;
+  color: #9602c7;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.text-info {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #333;
+}
+
+footer {
+  background: #f8f8f8;
+  padding: 40px 20px;
+  margin-top: 60px;
+  font-size: 14px;
+  color: #666;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 40px;
+}
+
+.footer-section h4 {
+  margin-bottom: 12px;
+  font-weight: 700;
+  color: #333;
+}
+
+.footer-section a {
+  display: block;
+  text-decoration: none;
+  color: #666;
+  margin-bottom: 8px;
+  transition: color 0.3s;
+}
+
+.footer-section a:hover {
+  color: purple;
 }
